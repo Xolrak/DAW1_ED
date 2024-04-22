@@ -1,4 +1,4 @@
-package com;
+package com.ccg;
 
 import org.junit.Assert.*;
 
@@ -6,6 +6,7 @@ import com.ccg.Ejercicios;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotEquals;
 import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
@@ -21,8 +22,21 @@ public class EjerciciosTest {
     @Test
     public void testSort() {
         Ejercicios ej = new Ejercicios();
-            assertArrayEquals(new int [] {1, 2, 3 ,4}, ej.sort(new int [] {4, 3, 2 ,1}));
-            
-        }
+        assertArrayEquals(new int [] {1, 2, 3 ,4}, ej.sort(new int [] {4, 3, 2 ,1}));
+    }
+    @Test
+    public void testAverage() {
+        Ejercicios ej = new Ejercicios();
+        assertEquals(-2.5, ej.average(new int[] {-1,-2,-3,-4}), 0.01);
+    }
+    @Test
+    public void test() {
+        Ejercicios ej = new Ejercicios();
+        assertTrue();
+    }
+    @Test
+    public void celsiusToFahrenheitTest() {
+        Ejercicios ej = new Ejercicios();
+        assertEquals(ej.celsiusToFahrenheit(45));
     }
 }
