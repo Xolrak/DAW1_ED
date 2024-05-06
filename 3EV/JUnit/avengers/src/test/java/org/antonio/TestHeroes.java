@@ -18,7 +18,7 @@ public class TestHeroes {
     public void setUp() {
         ironman = new Heroe("Iron Man", "Traje de alta tecnología", "Filantropo y rico");
         spiderman = new Heroe("Peter Parker", "Sentido arácnido","Estudiante");
-        capitanAmerica = new Heroe("", null, null)
+        capitanAmerica = new Heroe("", null, null);
         gioGio = new Heroe("Giorno Giovanna", "Golden Wild Experience", "Hijo de DIO");
     }
 
@@ -31,9 +31,11 @@ public class TestHeroes {
 
         assertEquals("Cat Woman", catWoman.getNombre());
         assertEquals("Trepar y arañar", catWoman.getSuperpoderes());
-        assertEquals("Es la amiga de batman", catWoman.getBiografia());
+        assertEquals("Es la amiga de Batman", catWoman.getBiografia());
 
-        assertNotEquals("Capitan America", catWoman.getNombre());
+        assertNotEquals("Giorno Giovanna", catWoman.getNombre());
+        assertNotEquals("Golden Wild Experience", catWoman.getSuperpoderes());
+        assertNotEquals("Hijo de DIO", catWoman.getBiografia());
     }
 }
 
