@@ -38,5 +38,3 @@ public class TestHeroes {
         assertNotEquals("Hijo de DIO", catWoman.getBiografia());
     }
 }
-
-
