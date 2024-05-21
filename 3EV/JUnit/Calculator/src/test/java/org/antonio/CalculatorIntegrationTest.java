@@ -7,21 +7,21 @@ public class CalculatorIntegrationTest {
     @Test
     public void testAddAndSubtract() {
         Calculator calculator = new Calculator();
-        assertEquals(8, calculator.add(5, 3));
-        assertEquals(7, calculator.subtract(10, 3));
+        assertEquals(8, calculator.add(5, calculator.subtract(6, 3)));
+        assertEquals(7, calculator.subtract(13, calculator.add(4, 2)));
         //
-        assertNotEquals(8, calculator.add(6, 3));
-        assertNotEquals(33, calculator.subtract(10, 3));
+        assertNotEquals(8, calculator.add(6, calculator.subtract(43, 2)));
+        assertNotEquals(33, calculator.subtract(10, calculator.add(33, 81)));
     }
 
     @Test
     public void testMultiplyAndDivide() {
         Calculator calculator = new Calculator();
-        assertEquals(6, calculator.multiply(2, 3),0.001);
-        assertEquals(2.0f, calculator.divide(6, 3), 0.001);
+        assertEquals(6, calculator.multiply(2f, calculator.divide(6f, 2f)),0.001f);
+        assertEquals(0.5, calculator.divide(6, calculator.multiply(4, 3)), 0.001);
         //
-        assertNotEquals(5, calculator.multiply(2, 3), 0.001);
-        assertNotEquals(3.0f, calculator.divide(6, 3), 0.001);
+        assertNotEquals(5, calculator.multiply(2, calculator.divide(64, 8)), 0.001);
+        assertNotEquals(3.0f, calculator.divide(6, calculator.multiply(32, 256)), 0.001);
 
     }
 
@@ -50,17 +50,17 @@ public class CalculatorIntegrationTest {
     public void testMultiplyWithZero() {
         Calculator calculator = new Calculator();
         assertEquals(0, calculator.multiply(-3, 0), 0.001);
-        assertEquals(0, calculator.multiply(3, 0), 0.001);
+        assertEquals(0, calculator.multiply(433, 0), 0.001);
         //
         assertNotEquals(33, calculator.multiply(76, 0), 0.001);
-        assertNotEquals(33, calculator.multiply(-76, 0), 0.001);
+        assertNotEquals(33, calculator.multiply(-354, 0), 0.001);
     }
 
     @Test
     public void testDivideWithZero() {
         Calculator calculator = new Calculator();
-        assertEquals(0.0f, calculator.divide(0, 3), 0.001);
-        assertEquals(0.0f, calculator.divide(0, -3), 0.001);
+        assertEquals(0.0f, calculator.divide(0, 32), 0.001);
+        assertEquals(0.0f, calculator.divide(0, -345), 0.001);
         //
         assertNotEquals(0.0f, calculator.divide(3, 4), 0.001);
         assertNotEquals(0.0f, calculator.divide(4, -5), 0.001);
