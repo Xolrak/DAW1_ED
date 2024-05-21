@@ -50,10 +50,6 @@ public class CalculatorTest {
     @Test(expected = IllegalArgumentException.class)
     public void testDivideByZero() {
         Calculator calculator = new Calculator();
-        try {
             calculator.divide(13, 0);
-        } catch (IllegalArgumentException e) {
-            System.out.println(e);
-        }
     }
 }
