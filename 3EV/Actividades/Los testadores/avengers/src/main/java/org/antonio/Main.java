@@ -32,6 +32,5 @@ public class Main {
         } catch (HeroeNoEncontradoException e) {
             System.out.println(e.getMessage());
         }
-        scanner.close();
     }
 }

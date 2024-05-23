@@ -1,40 +1,36 @@
 package org.antonio;
 
-public class Luffy {
+public class Luffy implements Personaje {
     private String nombre;
     private int poder;
-    private int poderMax = 100;
-    private int contador = 1;
 
     public Luffy(String nombre, int poder) {
         this.nombre = nombre;
         this.poder = poder;
     }
 
-    //Getters
     public String getNombre() {
         return nombre;
+    }
+
+    //Setter para el nombre de Luffy
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 
     public int getPoder() {
         return poder;
     }
-
-    //Setters
-    public void SetNombre(String nombre) {
-        this.nombre = nombre;
-    }
+    
+    //Setter para el Poder del personaje
     public void setPoder(int poder) {
-        if (contador == 1) {
-          this.poder = poderMax;
-          contador++;
-        }
-        else {
-          this.poder = poder;
-          contador++;
-        }
+        this.poder = poder;
     }
 
+    @Override
+    public void recibirDanio(int cantidadDanio) {
+        this.poder -= cantidadDanio;
+    }
 
     // Método para atacar a otro personaje
     public void atacar(Personaje enemigo) {

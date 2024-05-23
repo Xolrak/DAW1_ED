@@ -15,23 +15,11 @@ public class Heroe {
         return nombre;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
     public String getSuperpoderes() {
         return superpoderes;
     }
 
-    public void setSuperpoderes(String superpoderes) {
-        this.superpoderes = superpoderes;
-    }
-    
     public String getBiografia() {
         return biografia;
-    }
-
-    public void setBiografia(String biografia) {
-        this.biografia = biografia;
     }
 }

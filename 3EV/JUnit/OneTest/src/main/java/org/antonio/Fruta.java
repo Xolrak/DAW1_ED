@@ -13,8 +13,18 @@ public class Fruta {
         return nombre;
     }
 
+    //Setter para el nombre de la fruta
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
     public boolean esDeliciosa() {
         return esDeliciosa;
+    }
+
+    //Setter para determinar si la fruta es deliciosa
+    public void setEsDeliciosa(boolean esDeliciosa) {
+        this.esDeliciosa = esDeliciosa;
     }
 
     public boolean puedoComer() {

@@ -16,10 +16,6 @@ public class GestorHeroes {
         this.heroes.add(heroe);
     }
 
-    public List<Heroe> getHeroes() {
-        return this.heroes;
-    }
-    
     public Heroe buscarHeroe(String nombre) throws HeroeNoEncontradoException {
         for (Heroe heroe : this.heroes) {
             if (heroe.getNombre().equals(nombre)) {

@@ -13,8 +13,18 @@ public class Barco {
         return nombre;
     }
 
+    //Setter para el nombre
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
     public int getCapacidad() {
         return capacidad;
+    }
+
+    //Setter para la capacidad del barco
+    public void setCapacidad(int capacidad) {
+        this.capacidad = capacidad;
     }
 
     public boolean agregarTripulante() {
