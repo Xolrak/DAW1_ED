@@ -15,14 +15,13 @@ public class TestHeroes {
 
     @Before
     public void setUp() {
-        ironman = new Heroe("Iron Man", "Traje de alta tecnología", "Filantropo y rico");
-        spiderman = new Heroe("Peter Parker", "Sentido arácnido","Estudiante");
-        capitanAmerica = new Heroe("Capitán América", "Superfuerza, agilidad, resistencia", "Soldado de la Segunda Guerra Mundial");
+        ironman = new Heroe("Iron Man", "Traje de alta tecnología", "Filantropo y rico", "3000");
+        spiderman = new Heroe("Peter Parker", "Sentido arácnido","Estudiante", "Amigo y vecino");
+        capitanAmerica = new Heroe("Capitán América", "Superfuerza, agilidad, resistencia", "Soldado de la Segunda Guerra Mundial","capi");
     }
-
     @Test
-    public void testSettersGettersHeroe() {
-        Heroe catWoman = new Heroe(null, null, null);
+    public void testSettersHeroe() {
+        Heroe catWoman = new Heroe(null, null, null, null);
         catWoman.setNombre("Cat Woman");
         catWoman.setSuperpoderes("Trepar y arañar");
         catWoman.setBiografia("Es la amiga de Batman");
@@ -33,9 +32,6 @@ public class TestHeroes {
 
         assertNotEquals("Giorno Giovanna", catWoman.getNombre());
         assertNotEquals("Golden Wild Experience", catWoman.getSuperpoderes());
-        assertNotEquals("Hijo perdido de DIO", catWoman.getBiografia());
+        assertNotEquals("Hijo de DIO", catWoman.getBiografia());
     }
-
-    @Test
-
 }
